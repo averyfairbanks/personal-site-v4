@@ -1,0 +1,24 @@
+.fix-styles {
+  height: 60px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.clean-link {
+  text-decoration: none;
+}
+
+.menu-link {
+  color: black !important;
+  font-size: 24px;
+}
+
+.menu-link a {
+  width: 150px;
+  text-align: center;
+}
+
+.flex-config {
+  flex-direction: row !important;
+  justify-content: center !important;
+}
