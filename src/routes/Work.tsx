@@ -1,8 +1,15 @@
 import MainNav from "../components/MainNav";
-import "../styles/MainNav.css"
+import PageContent from "../components/PageContent";
+import content from "../content/content";
+import "../styles/MainNav.css";
 
 const Work = () => {
-  return <MainNav />;
+  return (
+    <>
+      <MainNav />
+      {PageContent(content.titles.work(), content.bodies.work().toString())}
+    </>
+  );
 };
 
 export default Work;

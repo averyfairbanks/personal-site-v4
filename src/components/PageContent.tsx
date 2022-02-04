@@ -2,7 +2,7 @@ import { Box, createTheme, Divider, Paper, ThemeProvider } from "@mui/material";
 import "../styles/PageContent.css";
 
 export default function PageContent(title: string, body: string) {
-  const lightTheme = createTheme({ palette: { mode: "light" } });
+  const lightTheme = createTheme({ palette: { mode: "dark" } });
 
   return (
     <ThemeProvider theme={lightTheme}>
@@ -16,8 +16,7 @@ export default function PageContent(title: string, body: string) {
         <div className="title">{title}</div>
         <Divider style={{ minHeight: 20 }} />
         <Paper
-          variant="outlined"
-          elevation={0}
+          elevation={3}
           style={{
             minHeight: "fit-content",
             minWidth: "80vw",
