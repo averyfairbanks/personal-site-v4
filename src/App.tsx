@@ -1,6 +1,7 @@
 import "./styles/App.css";
 import { Link } from "react-router-dom";
-import content from "./content/content";
+import {content} from "./resources/content";
+
 
 const App = () => {
   return (

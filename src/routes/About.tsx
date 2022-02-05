@@ -1,7 +1,7 @@
 import MainNav from "../components/MainNav";
 import PageContent from "../components/PageContent";
 import "../styles/MainNav.css";
-import content from '../content/content'
+import {content} from '../resources/content'
 
 const About = () => {
   return (
