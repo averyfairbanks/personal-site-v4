@@ -7,7 +7,6 @@ import Contact from "./routes/Contact";
 import { Box } from "@mui/system";
 import "./index.css";
 
-
 ReactDOM.render(
   <Box className="centered">
   <BrowserRouter>
