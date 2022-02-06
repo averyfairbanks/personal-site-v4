@@ -12,8 +12,8 @@ const Work = () => {
       <MainNav />
       <Box className="box-sizing">
         {PageContent(content.titles.work())}
-        {work.map((val: Job, ind: number) => {
-          return WorkCard(val, ind);
+        {work.map((job: Job, ind: number) => {
+          return WorkCard(job, ind);
         })}
       </Box>
     </>

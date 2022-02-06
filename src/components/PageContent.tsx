@@ -4,32 +4,24 @@ import "../styles/PageContent.css";
 export default function PageContent(title: string, body?: string) {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 
-  const paperStyle = {
-    minHeight: 300,
-    maxWidth: "80vw",
-    minWidth: "70vw",
-    margin: "0 20px",
+  const boxStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "calc(100vh - 70px)",
   };
 
   const dividerStyle = {
-    minHeight: 20,
+    minHeight: 18,
   };
 
   if (body) {
     return (
       <ThemeProvider theme={darkTheme}>
-        <Box
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: "100vh",
-          }}
-        >
+        <Box sx={boxStyle} className="box-sizing">
           <div className="title">{title}</div>
-          <Divider style={dividerStyle} />
-          <Paper elevation={3} style={paperStyle}>
+          <Paper elevation={3} className="paper-sizing">
             <div className="body-text">{body}</div>
           </Paper>
         </Box>
