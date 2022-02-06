@@ -1,15 +1,15 @@
-.box-sizing {
+.box-sizing-work {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 80%;
   min-height: 100vh;
-  margin-top: 40px;
+  margin-top: 90px;
 }
 
 @media screen and (max-width: 630px) {
-  .box-sizing {
+  .box-sizing-work {
     margin-top: 70px;
   }
 }
