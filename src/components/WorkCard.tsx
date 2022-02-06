@@ -6,23 +6,26 @@ import {
   Typography,
   createTheme,
   Divider,
+  Avatar,
 } from "@mui/material";
 import "../styles/WorkCard.css";
 import { Job } from "../resources/content";
 
-export default function WorkCard(card: Job, index: number) {
+export default function WorkCard(job: Job, index: number) {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 
   return (
     <ThemeProvider theme={darkTheme} key={index}>
       <Card className="fix-size">
-        <CardActionArea>
+        <CardActionArea href={job.url} target="_blank">
           <CardContent>
+            <Avatar src={job.logo} sx={{height: 60, width: 60}}/>
+            <Divider variant="inset" sx={{borderBottomWidth: 0}} style={{ minHeight: 10 }}/>
             <Typography variant="h5" gutterBottom>
-              {card.company}
+              {job.company}
             </Typography>
-            <Typography variant="h4">{card.title}</Typography>
-            <Typography variant="h6">{card.description}</Typography>
+            <Typography variant="h4">{job.title}</Typography>
+            <Typography variant="h6">{job.description}</Typography>
           </CardContent>
         </CardActionArea>
       </Card>
