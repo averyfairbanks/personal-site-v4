@@ -17,6 +17,10 @@
   line-height: 36px;
 }
 
+.box-sizing {
+  margin-top: 0 !important;
+}
+
 div {
   white-space: pre-wrap;
 }
