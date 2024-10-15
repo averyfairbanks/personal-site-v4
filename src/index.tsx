@@ -8,15 +8,6 @@ import { Box } from "@mui/system";
 import "./index.css";
 
 ReactDOM.render(
-  <Box className="centered">
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
-  </Box>,
+  <App />,
   document.getElementById("root"),
 );
