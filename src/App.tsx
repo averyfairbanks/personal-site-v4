@@ -5,22 +5,23 @@ import Contact from "./routes/Contact";
 import Work from "./routes/Work";
 import Home from "./routes/Home";
 import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material";
-
+import { Box, createTheme } from "@mui/material";
 
 const App = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+      <Box className="centered">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      </Box>
     </ThemeProvider>
   );
 };

@@ -1,21 +1,17 @@
-import { ThemeProvider } from "@emotion/react";
 import {
+  Avatar,
   Card,
   CardActionArea,
   CardContent,
-  Typography,
-  createTheme,
   Divider,
-  Avatar,
+  Typography,
 } from "@mui/material";
-import "../styles/WorkCard.css";
 import { Job } from "../resources/content";
+import "../styles/WorkCard.css";
 
 export default function WorkCard(job: Job, index: number) {
-  const darkTheme = createTheme({ palette: { mode: "dark" } });
-
   return (
-    <ThemeProvider theme={darkTheme} key={index}>
+    <>
       <Card className="fix-size">
         <CardActionArea href={job.url} target="_blank">
           <CardContent>
@@ -34,6 +30,6 @@ export default function WorkCard(job: Job, index: number) {
         </CardActionArea>
       </Card>
       <Divider style={{ minHeight: 20 }} />
-    </ThemeProvider>
+    </>
   );
 }

@@ -10,7 +10,7 @@ const Work = () => {
   return (
     <>
       <MainNav />
-      <Box className="box-sizing-work">
+      <Box className="box-sizing-work centered">
         {PageContent(content.titles.work)}
         {work.map((job: Job, ind: number) => {
           return WorkCard(job, ind);
