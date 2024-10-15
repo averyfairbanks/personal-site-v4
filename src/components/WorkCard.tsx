@@ -4,8 +4,14 @@ import {
   CardActionArea,
   CardContent,
   Divider,
+  Icon,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   Typography,
 } from "@mui/material";
+import Brightness1Icon from '@mui/icons-material/Brightness1';
 import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
 
@@ -25,7 +31,16 @@ export default function WorkCard(job: Job, index: number) {
               {job.company}
             </Typography>
             <Typography variant="h4">{job.title}</Typography>
-            <Typography variant="h6">{job.description}</Typography>
+            <List>
+              {job.description?.map((bulletText: string, ind: number) => (
+                <ListItem key={ind}>
+                  <ListItemIcon>
+                    <Brightness1Icon />
+                  </ListItemIcon>
+                  <ListItemText>{bulletText}</ListItemText>
+                </ListItem>
+              ))}
+            </List>
           </CardContent>
         </CardActionArea>
       </Card>

@@ -8,14 +8,12 @@ export const content = {
     contact: "CONTACT 📬",
   },
   bodies: {
-    about:
-      `One of those weirdos that actually likes their job.\
+    about: `One of those weirdos that actually likes their job.\
       
       Proficient in many languages, frameworks, and libraries including  the usual suspects: Java with SpringBoot, TypeScript React, and numerous flavors of SQL. \
       
       An avid climber 🧗, runner 🏃, and hiker 🥾 when I can spare the time.`,
-    contact:
-      `If you want to reach me, my personal email is: 
+    contact: `If you want to reach me, my personal email is: 
       
       avery [at] averyf [dot] dev`,
   },
@@ -34,11 +32,10 @@ export const work: Job[] = [
     company: "Attentive Mobile",
     title: "Software Engineer I - Tactical Engineering",
     description: [
-      `Designed and developed a new SMS-distributed digital wallet loyalty product - creating a new revenue stream \
-        per client of $3k+ a month, in addition to the engineering hours charged, which continues to attract new brands.`,
-      `Re-designed and re-wrote large swaths of existing SMS-distributed digital coupons functionality that eliminated \
-        70% of billed third party vendor calls, allowing us to pass on that savings to one of our biggest clients.`,
-      `Proposed new team-wide interface-driven design patterns that have since been adopted across the majority of \
+      `Designed and developed a new SMS-distributed digital wallet loyalty product - creating a new revenue stream per\ client of $3k+ a month, in addition to the engineering hours charged, which continues to attract new brands.`,
+      `Re-designed and re-wrote large swaths of existing SMS-distributed digital coupons functionality that eliminated\
+       \ 70% of billed third party vendor calls, allowing us to pass on that savings to one of our biggest clients.`,
+      `Proposed new team-wide interface-driven design patterns that have since been adopted across the majority of\
         Tactical-owned services, standardizing large portions of the code and simplifying collaboration.`,
       `Adapted company standard cursor-based pagination pattern to support sorting based on multiple fields, including \
         arbitrary fields like strings, delivering functionality requested by clients and enabling native compatibility with \
