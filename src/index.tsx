@@ -9,14 +9,14 @@ import "./index.css";
 
 ReactDOM.render(
   <Box className="centered">
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/work" element={<Work />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   </Box>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );

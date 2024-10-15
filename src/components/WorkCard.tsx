@@ -19,8 +19,12 @@ export default function WorkCard(job: Job, index: number) {
       <Card className="fix-size">
         <CardActionArea href={job.url} target="_blank">
           <CardContent>
-            <Avatar src={job.logo} sx={{height: 60, width: 60}}/>
-            <Divider variant="inset" sx={{borderBottomWidth: 0}} style={{ minHeight: 10 }}/>
+            <Avatar src={job.logo} sx={{ height: 60, width: 60 }} />
+            <Divider
+              variant="inset"
+              sx={{ borderBottomWidth: 0 }}
+              style={{ minHeight: 10 }}
+            />
             <Typography variant="h5" gutterBottom>
               {job.company}
             </Typography>
