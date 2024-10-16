@@ -1,4 +1,4 @@
-import { Box, createTheme, Divider, Paper, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
 
 export default function PageContent(title: string, body?: string) {
