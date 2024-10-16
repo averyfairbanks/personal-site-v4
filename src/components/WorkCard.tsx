@@ -1,4 +1,4 @@
-import CircleIcon from '@mui/icons-material/Circle';
+import CircleIcon from "@mui/icons-material/Circle";
 import {
   Avatar,
   Card,
@@ -9,7 +9,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Typography
+  Typography,
 } from "@mui/material";
 import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
@@ -29,14 +29,22 @@ export default function WorkCard(job: Job, index: number) {
             <Typography variant="h5" gutterBottom fontWeight={700}>
               {job.company}
             </Typography>
-            <Typography variant="h4" fontWeight={700}>{job.title}</Typography>
+            <Typography variant="h4" fontWeight={700}>
+              {job.title}
+            </Typography>
             <List>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
-                  <ListItemIcon >
+                  <ListItemIcon>
                     <CircleIcon sx={{ width: 10 }} />
                   </ListItemIcon>
-                  <ListItemText primary={<Typography variant="h5" fontWeight={700}>{bulletText}</Typography>} />
+                  <ListItemText
+                    primary={
+                      <Typography variant="h5" fontWeight={700}>
+                        {bulletText}
+                      </Typography>
+                    }
+                  />
                 </ListItem>
               ))}
             </List>
