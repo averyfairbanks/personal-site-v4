@@ -22,7 +22,7 @@ export default function PageContent(title: string, body?: string) {
     </Box>
   ) : (
     <>
-      <Typography className="title">{title}</Typography>
+      <Typography variant='h1' className="title">{title}</Typography>
       <Divider style={dividerStyle} />
     </>
   );
