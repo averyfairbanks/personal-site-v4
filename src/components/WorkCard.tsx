@@ -1,17 +1,16 @@
+import CircleIcon from '@mui/icons-material/Circle';
 import {
   Avatar,
   Card,
   CardActionArea,
   CardContent,
   Divider,
-  Icon,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Typography,
+  Typography
 } from "@mui/material";
-import Brightness1Icon from '@mui/icons-material/Brightness1';
 import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
 
@@ -19,7 +18,7 @@ export default function WorkCard(job: Job, index: number) {
   return (
     <>
       <Card className="fix-size">
-        <CardActionArea href={job.url} target="_blank">
+        <CardActionArea className="bg" href={job.url} target="_blank">
           <CardContent>
             <Avatar src={job.logo} sx={{ height: 60, width: 60 }} />
             <Divider
@@ -27,17 +26,17 @@ export default function WorkCard(job: Job, index: number) {
               sx={{ borderBottomWidth: 0 }}
               style={{ minHeight: 10 }}
             />
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom fontWeight={700}>
               {job.company}
             </Typography>
-            <Typography variant="h4">{job.title}</Typography>
+            <Typography variant="h4" fontWeight={700}>{job.title}</Typography>
             <List>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
-                  <ListItemIcon>
-                    <Brightness1Icon />
+                  <ListItemIcon >
+                    <CircleIcon sx={{ width: 10 }} />
                   </ListItemIcon>
-                  <ListItemText>{bulletText}</ListItemText>
+                  <ListItemText primary={<Typography variant="h5" fontWeight={700}>{bulletText}</Typography>} />
                 </ListItem>
               ))}
             </List>

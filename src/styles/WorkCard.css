@@ -11,3 +11,7 @@
     min-width: 92vw;
   }
 }
+
+.bg {
+  background: var(--secondary);
+}

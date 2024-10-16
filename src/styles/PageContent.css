@@ -7,6 +7,11 @@
   margin: 20px 20px;
 }
 
+.bg {
+  background: var(--secondary);
+  color: white
+}
+
 .body-text {
   font-family: "Nunito", sans-serif;
   font-size: 24px;
