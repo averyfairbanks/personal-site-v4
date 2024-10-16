@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,5 +9,11 @@ body {
 
 :root {
   --background: white;
+  --secondary: linear-gradient(
+    0deg,
+    rgba(131, 58, 180, 1) 40%,
+    rgba(253, 29, 29, 1) 83%,
+    rgba(252, 176, 69, 1) 99%
+  );
   --text-primary: black;
 }

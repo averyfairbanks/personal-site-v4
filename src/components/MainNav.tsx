@@ -28,7 +28,7 @@ const MainNav = () => {
           {!isCurrentURL("/about") ? (
             <MenuItem>
               <Link className="clean-link menu-link" to="/about">
-                {content.titles.about().toLowerCase()}
+                {content.titles.about.toLowerCase()}
               </Link>
             </MenuItem>
           ) : (
@@ -37,7 +37,7 @@ const MainNav = () => {
           {!isCurrentURL("/work") ? (
             <MenuItem>
               <Link className="clean-link menu-link" to="/work">
-                {content.titles.work().toLowerCase()}
+                {content.titles.work.toLowerCase()}
               </Link>
             </MenuItem>
           ) : (
@@ -46,7 +46,7 @@ const MainNav = () => {
           {!isCurrentURL("/contact") ? (
             <MenuItem>
               <Link className="clean-link menu-link" to="/contact">
-                {content.titles.contact().toLowerCase()}
+                {content.titles.contact.toLowerCase()}
               </Link>
             </MenuItem>
           ) : (

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 
 .paper-sizing {
   min-height: fit-content;
@@ -8,8 +7,13 @@
   margin: 20px 20px;
 }
 
+.bg {
+  background: var(--secondary);
+  color: white;
+}
+
 .body-text {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   padding: 20px;
   text-align: center;

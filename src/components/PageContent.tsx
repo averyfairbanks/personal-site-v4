@@ -1,9 +1,7 @@
-import { Box, createTheme, Divider, Paper, ThemeProvider } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
 
 export default function PageContent(title: string, body?: string) {
-  const darkTheme = createTheme({ palette: { mode: "dark" } });
-
   const boxStyle = {
     display: "flex",
     flexDirection: "column",
@@ -16,23 +14,21 @@ export default function PageContent(title: string, body?: string) {
     minHeight: 18,
   };
 
-  if (body) {
-    return (
-      <ThemeProvider theme={darkTheme}>
-        <Box sx={boxStyle} className="box-sizing">
-          <div className="title">{title}</div>
-          <Paper elevation={3} className="paper-sizing">
-            <div className="body-text">{body}</div>
-          </Paper>
-        </Box>
-      </ThemeProvider>
-    );
-  } else {
-    return (
-      <>
-        <div className="title">{title}</div>
-        <Divider style={dividerStyle} />
-      </>
-    );
-  }
+  return body ? (
+    <Box sx={boxStyle} className="box-sizing paper-sizing">
+      <Typography variant="h1" className="title">
+        {title}
+      </Typography>
+      <Typography variant="h5" className="body-text bg" fontWeight={700}>
+        {body}
+      </Typography>
+    </Box>
+  ) : (
+    <>
+      <Typography variant="h1" className="title">
+        {title}
+      </Typography>
+      <Divider style={dividerStyle} />
+    </>
+  );
 }
