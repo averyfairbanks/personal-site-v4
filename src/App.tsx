@@ -4,11 +4,10 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Work from "./routes/Work";
 import Home from "./routes/Home";
-import { ThemeProvider } from "@emotion/react";
-import { Box, createTheme } from "@mui/material";
+import { Box, createTheme , ThemeProvider} from "@mui/material";
 import MainNav from "./components/MainNav";
 
-const App = () => {
+const App: React.FC = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 
   return (
