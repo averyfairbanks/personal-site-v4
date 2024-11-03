@@ -20,6 +20,10 @@ body {
   animation: fadein 1s;
 }
 
+.clean-link {
+  text-decoration: none;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

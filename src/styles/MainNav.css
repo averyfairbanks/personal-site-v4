@@ -4,10 +4,6 @@
   box-shadow: none !important;
 }
 
-.clean-link {
-  text-decoration: none;
-}
-
 .menu-link {
   color: var(--text-primary) !important;
   font-size: 30px;

@@ -1,7 +1,10 @@
 import { AppBar, MenuItem, Slide, useScrollTrigger } from "@mui/material";
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { content } from "../resources/content";
+import "../styles/MainNav.css";
+import "../styles/App.css"
+
 
 interface NavProps {
   children: React.ReactElement;

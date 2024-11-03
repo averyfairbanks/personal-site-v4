@@ -13,7 +13,7 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box className="centered">
-        <BrowserRouter basename="/">
+        <BrowserRouter>
           <MainNav />
           <Routes>
             <Route path="/" element={<Home />} />
