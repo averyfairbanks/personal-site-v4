@@ -1,11 +1,7 @@
 import { AppBar, MenuItem, Slide, useScrollTrigger } from "@mui/material";
 import React from "react";
-import { Link, useNavigation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { content } from "../resources/content";
-
-const isCurrentURL = (url: string): boolean => {
-  return window.location.pathname === url;
-};
 
 interface NavProps {
   children: React.ReactElement;
@@ -14,16 +10,23 @@ interface NavProps {
 const HideOnScroll: React.FC<NavProps> = ({ children }) => {
   const trigger = useScrollTrigger();
 
-  return isCurrentURL("") ? (
+  return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
-  ) : (
-    <>{children}</>
   );
 };
 
 const MainNav: React.FC = () => {
+  const isCurrentURL = (url: string) => {
+    return window.location.pathname === url;
+  };
+  
+  const { pathname } = useLocation();
+  if (pathname === '/') {
+    return null;
+  }
+  
   const { about, work, contact } = content;
 
   return (
