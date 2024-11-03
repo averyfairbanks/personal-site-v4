@@ -8,7 +8,8 @@
 }
 
 .bg {
-  background: var(--secondary);
+  background: var(--secondary) !important;
+  text-shadow: var(--text-primary) 2px 0 5px;
   color: white;
 }
 

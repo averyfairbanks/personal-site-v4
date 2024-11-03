@@ -1,4 +1,4 @@
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Card, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
 
 export default function PageContent(title: string, body?: string) {
@@ -19,9 +19,10 @@ export default function PageContent(title: string, body?: string) {
       <Typography variant="h1" className="title">
         {title}
       </Typography>
-      <Typography variant="h5" className="body-text bg" fontWeight={700}>
-        {body}
-      </Typography>
+      <Card className="bg">
+        <Typography variant="h5" className="body-text" fontWeight={700}>
+          {body}
+        </Typography></Card>
     </Box>
   ) : (
     <>
