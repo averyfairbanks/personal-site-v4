@@ -9,12 +9,12 @@ const Work: React.FC = () => {
   const { work } = content;
 
   return (
-      <Box className="box-sizing-work centered">
-        <PageContent pageContent={work} />
-        {jobs.map((job: Job, ind: number) => (
-          <WorkCard key={ind} job={job} />
-        ))}
-      </Box>
+    <Box className="box-sizing-work centered">
+      <PageContent pageContent={work} />
+      {jobs.map((job: Job, ind: number) => (
+        <WorkCard key={ind} job={job} />
+      ))}
+    </Box>
   );
 };
 

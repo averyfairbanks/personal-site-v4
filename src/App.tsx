@@ -4,7 +4,7 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Work from "./routes/Work";
 import Home from "./routes/Home";
-import { Box, createTheme , ThemeProvider} from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import MainNav from "./components/MainNav";
 
 const App: React.FC = () => {
