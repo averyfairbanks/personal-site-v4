@@ -22,7 +22,8 @@ export default function PageContent(title: string, body?: string) {
       <Card className="bg">
         <Typography variant="h5" className="body-text" fontWeight={700}>
           {body}
-        </Typography></Card>
+        </Typography>
+      </Card>
     </Box>
   ) : (
     <>

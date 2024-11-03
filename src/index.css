@@ -9,6 +9,6 @@ body {
 
 :root {
   --background: white;
-  --secondary: linear-gradient(to top, #FDBB2D 0%, #3A1C71 100%);
-  --text-primary: #3A1C71;
+  --secondary: linear-gradient(to top, #fdbb2d 0%, #3a1c71 100%);
+  --text-primary: #3a1c71;
 }

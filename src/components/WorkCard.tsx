@@ -33,7 +33,7 @@ export default function WorkCard(job: Job, index: number) {
             <Typography variant="h4" fontWeight={700}>
               {job.title}
             </Typography>
-            <List sx={{ textShadow: 'var(--text-primary) 2px 0 10px' }}>
+            <List sx={{ textShadow: "var(--text-primary) 2px 0 10px" }}>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
                   <ListItemIcon>
