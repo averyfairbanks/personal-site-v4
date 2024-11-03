@@ -4,7 +4,7 @@ import viteTsconfigPaths from "vite-tsconfig-paths";
 import browserslistToEsbuild from "browserslist-to-esbuild";
 
 export default defineConfig({
-  base: "",
+  base: "/",
   plugins: [react(), viteTsconfigPaths()],
   server: {
     open: true,

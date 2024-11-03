@@ -7,7 +7,7 @@ import Home from "./routes/Home";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import MainNav from "./components/MainNav";
 
-const App: React.FC = () => {
+const App = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
 
   return (
