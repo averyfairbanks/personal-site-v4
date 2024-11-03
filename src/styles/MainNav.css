@@ -1,11 +1,12 @@
 .fix-styles {
   height: 60px;
   background-color: white !important;
+  color: var(--text-color-title);
   box-shadow: none !important;
 }
 
 .menu-link {
-  color: var(--text-primary) !important;
+  color: var(--text-color-title) !important;
   font-size: 30px;
 }
 

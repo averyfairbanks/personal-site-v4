@@ -1,5 +1,6 @@
 import { Box, Card, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
+import "../styles/App.css";
 import { PageContent as PageContentType } from "../resources/content";
 
 interface PageContentProps {
