@@ -8,7 +8,9 @@ body {
 }
 
 :root {
-  --background: white;
-  --secondary: linear-gradient(to top, #fdbb2d 0%, #3a1c71 100%);
-  --text-primary: #3a1c71;
+  --primary-bg: white;
+  --secondary-bg: linear-gradient(to top, #fdbb2d 0%, #3a1c71 100%);
+  --text-color-title: #3a1c71;
+  --text-color-body: white;
+  --text-shadow-body: var(--text-color-title) 2px 0 5px;
 }

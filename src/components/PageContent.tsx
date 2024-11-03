@@ -1,7 +1,15 @@
 import { Box, Card, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
+import "../styles/App.css";
+import { PageContent as PageContentType } from "../resources/content";
 
-export default function PageContent(title: string, body?: string) {
+interface PageContentProps {
+  pageContent: PageContentType;
+}
+
+const PageContent: React.FC<PageContentProps> = ({ pageContent }) => {
+  const { title, body } = pageContent;
+
   const boxStyle = {
     display: "flex",
     flexDirection: "column",
@@ -15,11 +23,11 @@ export default function PageContent(title: string, body?: string) {
   };
 
   return body ? (
-    <Box sx={boxStyle} className="box-sizing paper-sizing">
+    <Box sx={boxStyle} className="box-sizing">
       <Typography variant="h1" className="title">
         {title}
       </Typography>
-      <Card className="bg">
+      <Card className="card-style">
         <Typography variant="h5" className="body-text" fontWeight={700}>
           {body}
         </Typography>
@@ -33,4 +41,6 @@ export default function PageContent(title: string, body?: string) {
       <Divider style={dividerStyle} />
     </>
   );
-}
+};
+
+export default PageContent;

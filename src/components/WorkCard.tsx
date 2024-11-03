@@ -15,9 +15,13 @@ import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
 import { Fragment } from "react";
 
-export default function WorkCard(job: Job, index: number) {
+interface WorkCardProps {
+  job: Job;
+}
+
+const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
   return (
-    <Fragment key={index}>
+    <Fragment>
       <Card className="fix-size">
         <CardActionArea className="bg" href={job.url} target="_blank">
           <CardContent>
@@ -33,7 +37,7 @@ export default function WorkCard(job: Job, index: number) {
             <Typography variant="h4" fontWeight={700}>
               {job.title}
             </Typography>
-            <List sx={{ textShadow: "var(--text-primary) 2px 0 10px" }}>
+            <List>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
                   <ListItemIcon>
@@ -55,4 +59,6 @@ export default function WorkCard(job: Job, index: number) {
       <Divider style={{ minHeight: 20 }} />
     </Fragment>
   );
-}
+};
+
+export default WorkCard;

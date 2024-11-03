@@ -4,8 +4,8 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Work from "./routes/Work";
 import Home from "./routes/Home";
-import { ThemeProvider } from "@emotion/react";
-import { Box, createTheme } from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
+import MainNav from "./components/MainNav";
 
 const App = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
@@ -14,6 +14,7 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <Box className="centered">
         <BrowserRouter>
+          <MainNav />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
