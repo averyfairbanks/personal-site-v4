@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import PageContent from "../components/PageContent";
 import WorkCard from "../components/WorkCard";
 import { content, Job, jobs } from "../resources/content";
-import "../styles/MainNav.css";
+import "../styles/App.css";
 import "../styles/Work.css";
 
 const Work: React.FC = () => {

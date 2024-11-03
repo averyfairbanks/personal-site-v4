@@ -37,7 +37,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
             <Typography variant="h4" fontWeight={700}>
               {job.title}
             </Typography>
-            <List sx={{ textShadow: "var(--text-primary) 2px 0 10px" }}>
+            <List>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
                   <ListItemIcon>

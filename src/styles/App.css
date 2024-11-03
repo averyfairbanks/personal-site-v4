@@ -6,7 +6,7 @@ body {
 
 .title {
   font-family: "Roboto", sans-serif;
-  color: var(--text-primary);
+  color: var(--text-color-title);
 }
 
 .centered {
@@ -41,6 +41,6 @@ body {
 
 @media screen and (max-width: 630px) {
   .title {
-    font-size: 52px;
+    font-size: 4rem !important;
   }
 }

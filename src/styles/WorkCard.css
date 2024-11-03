@@ -8,11 +8,11 @@
 @media screen and (max-width: 630px) {
   .fix-size {
     max-width: 100vw;
-    min-width: 92vw;
+    min-width: 100vw;
   }
 }
 
 .bg {
-  background: var(--secondary);
-  text-shadow: var(--text-primary) 2px 0 5px;
+  background: var(--secondary-bg);
+  text-shadow:var(--text-shadow-body);
 }
