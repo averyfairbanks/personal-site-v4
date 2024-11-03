@@ -1,19 +1,30 @@
 import attnLogo from "../resources/logos/Attentive_Logo-Circle_Black-Yellow_RGB.svg";
 
-export const content = {
-  titles: {
-    welcome: "WELCOME 👋",
-    about: "ABOUT 📝",
-    work: "WORK 💪",
-    contact: "CONTACT 📬",
+export interface PageContent {
+  title: string;
+  body?: string;
+}
+
+export type PageContentKey = "welcome" | "about" | "work" | "contact";
+
+export const content: Record<PageContentKey, PageContent> = {
+  welcome: {
+    title: "WELCOME 👋",
   },
-  bodies: {
-    about: `One of those weirdos that actually likes their job.
+  about: {
+    title: "ABOUT 📝",
+    body: `One of those weirdos that actually likes their job.
       
       Proficient in many languages, frameworks, and libraries including  the usual suspects: Java with SpringBoot, TypeScript React, and numerous flavors of SQL.
       
       An avid climber 🧗, runner 🏃, and hiker 🥾 when I can spare the time.`,
-    contact: `If you want to reach me, my personal email is: 
+  },
+  work: {
+    title: "WORK 💪",
+  },
+  contact: {
+    title: "CONTACT 📬",
+    body: `If you want to reach me, my personal email is: 
       
       avery [at] averyf [dot] dev`,
   },
@@ -22,9 +33,9 @@ export const content = {
 export interface Job {
   company: string;
   title: string;
-  description?: string[];
-  logo?: string;
+  description: string[];
   url: string;
+  logo?: string;
 }
 
 export const work: Job[] = [
@@ -38,8 +49,8 @@ export const work: Job[] = [
       `Adapted company standard cursor-based pagination pattern to support sorting based on multiple fields, including arbitrary fields like strings, delivering functionality requested by clients and enabling native compatibility with graph-connected UI components provided by our platform team.`,
       `Coordinated between our team and several other engineering teams to add additional functionality to their domain-specific services to unblock a project automating the onboarding of over 10,000 new billable company accounts.`,
     ],
-    logo: attnLogo,
     url: "https://www.attentivemobile.com/",
+    logo: attnLogo,
   },
   {
     company: "Attentive Mobile",
@@ -48,8 +59,8 @@ export const work: Job[] = [
       `Designed and developed self-service fullstack solutions to cover gaps in the product or as internal tools, ultimately eliminating around 15 ticket types and creating team bandwidth.`,
       `Worked effectively across engineering teams to contribute code to their domain-specific services, in line with their best-practices and existing infrastructure.`,
     ],
-    logo: attnLogo,
     url: "https://www.attentivemobile.com/",
+    logo: attnLogo,
   },
   {
     company: "Attentive Mobile",

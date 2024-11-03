@@ -4,10 +4,18 @@ import { content } from "../resources/content";
 import "../styles/MainNav.css";
 
 const Contact = () => {
+  const {
+    titles: { contact },
+    bodies: { contact },
+  } = content;
+
   return (
     <>
       <MainNav />
-      {PageContent(content.titles.contact, content.bodies.contact)}
+      <PageContent
+        title={content.titles.contact}
+        body={content.bodies.contact}
+      />
     </>
   );
 };
