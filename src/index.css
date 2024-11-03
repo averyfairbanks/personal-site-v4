@@ -9,11 +9,6 @@ body {
 
 :root {
   --background: white;
-  --secondary: linear-gradient(
-    0deg,
-    rgba(131, 58, 180, 1) 40%,
-    rgba(253, 29, 29, 1) 83%,
-    rgba(252, 176, 69, 1) 99%
-  );
-  --text-primary: black;
+  --secondary: linear-gradient(to top, #fdbb2d 0%, #3a1c71 100%);
+  --text-primary: #3a1c71;
 }

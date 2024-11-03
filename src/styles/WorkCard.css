@@ -14,4 +14,5 @@
 
 .bg {
   background: var(--secondary);
+  text-shadow: var(--text-primary) 2px 0 5px;
 }
