@@ -38,7 +38,7 @@ export interface Job {
   logo?: string;
 }
 
-export const work: Job[] = [
+export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
     title: "Software Engineer I - Tactical Engineering",

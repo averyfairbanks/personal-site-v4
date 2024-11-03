@@ -15,9 +15,13 @@ import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
 import { Fragment } from "react";
 
-export default function WorkCard(job: Job, index: number) {
+interface WorkCardProps {
+  job: Job;
+}
+
+const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
   return (
-    <Fragment key={index}>
+    <Fragment>
       <Card className="fix-size">
         <CardActionArea className="bg" href={job.url} target="_blank">
           <CardContent>
@@ -55,4 +59,6 @@ export default function WorkCard(job: Job, index: number) {
       <Divider style={{ minHeight: 20 }} />
     </Fragment>
   );
-}
+};
+
+export default WorkCard;

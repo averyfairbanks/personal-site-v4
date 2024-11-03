@@ -1,20 +1,20 @@
 import { Box } from "@mui/system";
-import MainNav from "../components/MainNav";
 import PageContent from "../components/PageContent";
 import WorkCard from "../components/WorkCard";
-import { content, Job, work } from "../resources/content";
+import { content, Job, jobs } from "../resources/content";
 import "../styles/MainNav.css";
 import "../styles/Work.css";
 
-const Work = () => {
+const Work: React.FC = () => {
+  const { work } = content;
+
   return (
     <>
-      <MainNav />
       <Box className="box-sizing-work centered">
-        {PageContent(content.titles.work)}
-        {work.map((job: Job, ind: number) => {
-          return WorkCard(job, ind);
-        })}
+        <PageContent pageContent={work} />
+        {jobs.map((job: Job, ind: number) => (
+          <WorkCard key={ind} job={job} />
+        ))}
       </Box>
     </>
   );

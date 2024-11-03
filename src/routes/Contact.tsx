@@ -1,23 +1,11 @@
-import MainNav from "../components/MainNav";
 import PageContent from "../components/PageContent";
 import { content } from "../resources/content";
 import "../styles/MainNav.css";
 
 const Contact = () => {
-  const {
-    titles: { contact },
-    bodies: { contact },
-  } = content;
+  const { contact } = content;
 
-  return (
-    <>
-      <MainNav />
-      <PageContent
-        title={content.titles.contact}
-        body={content.bodies.contact}
-      />
-    </>
-  );
+  return <PageContent pageContent={contact} />;
 };
 
 export default Contact;

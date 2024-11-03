@@ -3,57 +3,55 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { content } from "../resources/content";
 
-interface Props {
+interface NavProps {
   children: React.ReactElement;
 }
 
-function HideOnScroll({ children }: Props) {
+const HideOnScroll: React.FC<NavProps> = ({ children }) => {
   const trigger = useScrollTrigger();
+
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
   );
-}
+};
 
-const MainNav = () => {
+const MainNav: React.FC<NavProps> = ({ children }) => {
   const isCurrentURL = (url: string) => {
     return window.location.pathname === url;
   };
+
+  const { about, work, contact } = content;
 
   return (
     <>
       <HideOnScroll>
         <AppBar className="flex-config fix-styles">
-          {!isCurrentURL("/about") ? (
+          {!isCurrentURL("/about") && (
             <MenuItem>
               <Link className="clean-link menu-link" to="/about">
-                {content.titles.about.toLowerCase()}
+                {about.title.toLowerCase()}
               </Link>
             </MenuItem>
-          ) : (
-            ""
           )}
-          {!isCurrentURL("/work") ? (
+          {!isCurrentURL("/work") && (
             <MenuItem>
               <Link className="clean-link menu-link" to="/work">
-                {content.titles.work.toLowerCase()}
+                {work.title.toLowerCase()}
               </Link>
             </MenuItem>
-          ) : (
-            ""
           )}
-          {!isCurrentURL("/contact") ? (
+          {!isCurrentURL("/contact") && (
             <MenuItem>
               <Link className="clean-link menu-link" to="/contact">
-                {content.titles.contact.toLowerCase()}
+                {contact.title.toLowerCase()}
               </Link>
             </MenuItem>
-          ) : (
-            ""
           )}
         </AppBar>
       </HideOnScroll>
+      {children}
     </>
   );
 };

@@ -6,6 +6,7 @@ import Work from "./routes/Work";
 import Home from "./routes/Home";
 import { ThemeProvider } from "@emotion/react";
 import { Box, createTheme } from "@mui/material";
+import MainNav from "./components/MainNav";
 
 const App = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
@@ -15,10 +16,14 @@ const App = () => {
       <Box className="centered">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/contact" element={<Contact />} />
+            <MainNav>
+              <>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/contact" element={<Contact />} />
+              </>
+            </MainNav>
           </Routes>
         </BrowserRouter>
       </Box>

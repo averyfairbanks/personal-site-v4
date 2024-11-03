@@ -1,16 +1,15 @@
 import { Box, Card, Divider, Typography } from "@mui/material";
 import "../styles/PageContent.css";
-import { PageContent } from "../resources/content";
+import { PageContent as PageContentType } from "../resources/content";
 
 interface PageContentProps {
-  pageContent: PageContent;
+  pageContent: PageContentType;
 }
 
 const PageContent: React.FC<PageContentProps> = ({ pageContent }) => {
   const { title, body } = pageContent;
 
   const boxStyle = {
-    marginTop: "0 !important",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -27,7 +26,7 @@ const PageContent: React.FC<PageContentProps> = ({ pageContent }) => {
       <Typography variant="h1" className="title">
         {title}
       </Typography>
-      <Card className="bg card-style">
+      <Card className="card-style">
         <Typography variant="h5" className="body-text" fontWeight={700}>
           {body}
         </Typography>

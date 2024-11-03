@@ -19,6 +19,10 @@
   line-height: 36px;
 }
 
+.box-sizing {
+  margin-top: 0 !important;
+}
+
 div {
   white-space: pre-wrap;
 }
@@ -28,7 +32,7 @@ div {
     margin-top: 70px !important;
   }
 
-  .paper-sizing {
+  .card-style {
     min-height: 300px;
     min-width: 90vw;
     margin-bottom: 20px;
