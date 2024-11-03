@@ -13,10 +13,11 @@ import {
 } from "@mui/material";
 import { Job } from "../resources/content";
 import "../styles/WorkCard.css";
+import { Fragment } from "react";
 
 export default function WorkCard(job: Job, index: number) {
   return (
-    <>
+    <Fragment key={index}>
       <Card className="fix-size">
         <CardActionArea className="bg" href={job.url} target="_blank">
           <CardContent>
@@ -32,7 +33,7 @@ export default function WorkCard(job: Job, index: number) {
             <Typography variant="h4" fontWeight={700}>
               {job.title}
             </Typography>
-            <List>
+            <List sx={{ textShadow: 'var(--text-primary) 2px 0 10px' }}>
               {job.description?.map((bulletText: string, ind: number) => (
                 <ListItem key={ind}>
                   <ListItemIcon>
@@ -52,6 +53,6 @@ export default function WorkCard(job: Job, index: number) {
         </CardActionArea>
       </Card>
       <Divider style={{ minHeight: 20 }} />
-    </>
+    </Fragment>
   );
 }

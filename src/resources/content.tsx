@@ -34,7 +34,7 @@ export const work: Job[] = [
     description: [
       `Designed and developed a new SMS-distributed digital wallet loyalty product - creating a new revenue stream per client of $3k+ a month, in addition to the engineering hours charged, which continues to attract new brands.`,
       `Re-designed and re-wrote large swaths of existing SMS-distributed digital coupons functionality that eliminated 70% of billed third party vendor calls, allowing us to pass on that savings to one of our biggest clients.`,
-      `Proposed new team-wide interface-driven design patterns that have since been adopted across the majority ofTactical-owned services, standardizing large portions of the code and simplifying collaboration.`,
+      `Proposed new team-wide interface-driven design patterns that have since been adopted across the majority of Tactical-owned services, standardizing large portions of the code and simplifying collaboration.`,
       `Adapted company standard cursor-based pagination pattern to support sorting based on multiple fields, including arbitrary fields like strings, delivering functionality requested by clients and enabling native compatibility with graph-connected UI components provided by our platform team.`,
       `Coordinated between our team and several other engineering teams to add additional functionality to their domain-specific services to unblock a project automating the onboarding of over 10,000 new billable company accounts.`,
     ],
