@@ -13,16 +13,13 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box className="centered">
-        <BrowserRouter>
+        <BrowserRouter basename="/">
+          <MainNav />
           <Routes>
-            <MainNav>
-              <>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/work" element={<Work />} />
-                <Route path="/contact" element={<Contact />} />
-              </>
-            </MainNav>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
       </Box>
