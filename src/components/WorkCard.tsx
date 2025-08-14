@@ -37,6 +37,9 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
             <Typography variant="h4" fontWeight={700}>
               {job.title}
             </Typography>
+            <Typography variant="h6" fontWeight={500}>
+              {job.dateRange}
+            </Typography>
             <List>
               {job.description?.map((bulletText: string, ind: number) => {
                 const indentBullet = bulletText.startsWith("-");

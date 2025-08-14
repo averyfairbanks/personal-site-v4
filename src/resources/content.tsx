@@ -33,6 +33,7 @@ export const content: Record<PageContentKey, PageContent> = {
 export interface Job {
   company: string;
   title: string;
+  dateRange: string;
   description: string[];
   url: string;
   logo?: string;
@@ -42,6 +43,7 @@ export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
     title: "Software Engineer II - Tactical Engineering",
+    dateRange: "Mar 2025 - Present",
     description: [
       `Integral to both of the team's key initiatives - including Provision API which automates and orchestrates tasks necessary to onboard new companies and the Access Control project completely overhauling UI permissions by user - maintaining product momentum and ensuring tight delivery deadlines are hit.`,
       `Provision API:`,
@@ -58,6 +60,7 @@ export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
     title: "Software Engineer I - Tactical Engineering",
+    dateRange: "Apr 2023 - Mar 2025",
     description: [
       `Designed and developed a new SMS-distributed digital wallet loyalty product - creating a new revenue stream per client of $3k+ a month, in addition to the engineering hours charged, which continues to attract new brands.`,
       `Re-designed and re-wrote large swaths of existing SMS-distributed digital coupons functionality that eliminated 70% of billed third party vendor calls, allowing us to pass on that savings to one of our biggest clients.`,
@@ -71,6 +74,7 @@ export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
     title: "Solutions Engineer II - Solutions Engineering",
+    dateRange: "Sep 2022 - Apr 2023",
     description: [
       `Designed and developed self-service fullstack solutions to cover gaps in the product or as internal tools, ultimately eliminating around 15 ticket types and creating team bandwidth.`,
       `Worked effectively across engineering teams to contribute code to their domain-specific services, in line with their best-practices and existing infrastructure.`,
@@ -81,6 +85,7 @@ export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
     title: "Solutions Engineer I - Solutions Engineering",
+    dateRange: "Jan 2022 - Sep 2022",
     description: [
       `Completed numerous daily support tasks manually that were not covered by the product or any internal tools, leading to continued client satisfaction and preventing churn.`,
       `Collaborated with client-facing staff to translate client requests into actionable work and translate technical concepts for all involved.`,
