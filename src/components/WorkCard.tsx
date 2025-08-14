@@ -43,7 +43,9 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
             <List>
               {job.description?.map((bulletText: string, ind: number) => {
                 const indentBullet = bulletText.startsWith("-");
-                bulletText = bulletText.replace("-", "");
+                if (indentBullet) {
+                  bulletText = bulletText.replace("-", "");
+                }
 
                 return (
                   <ListItem
