@@ -38,20 +38,29 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
               {job.title}
             </Typography>
             <List>
-              {job.description?.map((bulletText: string, ind: number) => (
-                <ListItem key={ind}>
-                  <ListItemIcon>
-                    <CircleIcon sx={{ width: 10 }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={
-                      <Typography variant="h5" fontWeight={700}>
-                        {bulletText}
-                      </Typography>
-                    }
-                  />
-                </ListItem>
-              ))}
+              {job.description?.map((bulletText: string, ind: number) => {
+                const indentBullet = bulletText.startsWith("-");
+                bulletText = bulletText.replace("-", "");
+
+                return (
+                  <ListItem
+                    key={ind}
+                    style={{ marginLeft: indentBullet ? 30 : undefined }}
+                    alignItems="flex-start"
+                  >
+                    <ListItemIcon>
+                      <CircleIcon sx={{ width: 10 }} />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={
+                        <Typography variant="h5" fontWeight={700}>
+                          {bulletText}
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                );
+              })}
             </List>
           </CardContent>
         </CardActionArea>

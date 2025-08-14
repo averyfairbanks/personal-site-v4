@@ -41,6 +41,22 @@ export interface Job {
 export const jobs: Job[] = [
   {
     company: "Attentive Mobile",
+    title: "Software Engineer II - Tactical Engineering",
+    description: [
+      `Integral to both of the team's key initiatives - including Provision API which automates and orchestrates tasks necessary to onboard new companies and the Access Control project completely overhauling UI permissions by user - maintaining product momentum and ensuring tight delivery deadlines are hit.`,
+      `Provision API:`,
+      `-Collaborated extensively with several relevant product teams to architect and implement novel functionality to "clone" complex domain objects from one company to another.`,
+      `-Contributed numerous smaller features, code optimizations, refactors, and bug fixes, again keeping us on target and ensuring what we deliver is as polished as possible.`,
+      `Access Control:`,
+      `-Planned and implemented numerous BE methods and UI utilization, allowing us to hit key deadlines for an internal product meeting and testing with the first client company.`,
+      `-Re-architected service and repository layers for clarity, extensibility, and graph relation support.`,
+      `Identified gaps and shortcomings in our internal localdev experience and wrote solutions to address them with the approval of the owning team; including adding support for leveraging our gateway locally, health checks for local java services, and better process ordering and orchestration to prevent specific race conditions.`,
+    ],
+    url: "https://www.attentivemobile.com/",
+    logo: attnLogo,
+  },
+  {
+    company: "Attentive Mobile",
     title: "Software Engineer I - Tactical Engineering",
     description: [
       `Designed and developed a new SMS-distributed digital wallet loyalty product - creating a new revenue stream per client of $3k+ a month, in addition to the engineering hours charged, which continues to attract new brands.`,
