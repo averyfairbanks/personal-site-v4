@@ -9,8 +9,9 @@ body {
 
 :root {
   --primary-bg: white;
-  --secondary-bg: linear-gradient(to top, #fdbb2d 0%, #3a1c71 100%);
+  --secondary-bg: linear-gradient(to top, #fdbb2d 0%, #5328a1 50%, #3a1c71 100%);
   --text-color-title: #3a1c71;
   --text-color-body: white;
   --text-shadow-body: var(--text-color-title) 2px 0 5px;
-}
+  --card-bg: #3a1c71;
+px 0 5px;
