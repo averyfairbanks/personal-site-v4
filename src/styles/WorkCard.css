@@ -14,5 +14,5 @@
 
 .bg {
   background: var(--secondary-bg);
-  text-shadow:var(--text-shadow-body);
+  text-shadow: var(--text-shadow-body);
 }

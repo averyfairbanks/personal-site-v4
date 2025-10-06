@@ -1,9 +1,9 @@
-import { Box } from "@mui/system";
-import PageContent from "../components/PageContent";
-import WorkCard from "../components/WorkCard";
-import { content, Job, jobs } from "../resources/content";
-import "../styles/App.css";
-import "../styles/Work.css";
+import { Box } from '@mui/system';
+import PageContent from '../components/PageContent';
+import WorkCard from '../components/WorkCard';
+import { content, Job, jobs } from '../resources/content';
+import '../styles/App.css';
+import '../styles/Work.css';
 
 const Work: React.FC = () => {
   const { work } = content;
