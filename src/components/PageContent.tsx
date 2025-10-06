@@ -1,26 +1,26 @@
-import { Box, Card, Divider, Typography } from "@mui/material";
-import "../styles/PageContent.css";
-import "../styles/App.css";
-import { PageContent as PageContentType } from "../resources/content";
+import { Box, Card, Divider, Typography } from '@mui/material'
+import '../styles/PageContent.css'
+import '../styles/App.css'
+import { PageContent as PageContentType } from '../resources/content'
 
 interface PageContentProps {
-  pageContent: PageContentType;
+  pageContent: PageContentType
 }
 
 const PageContent: React.FC<PageContentProps> = ({ pageContent }) => {
-  const { title, body } = pageContent;
+  const { title, body } = pageContent
 
   const boxStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "calc(100vh - 70px)",
-  };
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 'calc(100vh - 70px)',
+  }
 
   const dividerStyle = {
     minHeight: 18,
-  };
+  }
 
   return body ? (
     <Box sx={boxStyle} className="box-sizing">
@@ -40,7 +40,7 @@ const PageContent: React.FC<PageContentProps> = ({ pageContent }) => {
       </Typography>
       <Divider style={dividerStyle} />
     </>
-  );
-};
+  )
+}
 
-export default PageContent;
+export default PageContent

@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./index.css";
-import About from "./routes/About";
-import Contact from "./routes/Contact";
-import Work from "./routes/Work";
-import Home from "./routes/Home";
-import { Box, createTheme, ThemeProvider } from "@mui/material";
-import MainNav from "./components/MainNav";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './index.css'
+import About from './routes/About'
+import Contact from './routes/Contact'
+import Work from './routes/Work'
+import Home from './routes/Home'
+import { Box, createTheme, ThemeProvider } from '@mui/material'
+import MainNav from './components/MainNav'
 
 const App = () => {
-  const darkTheme = createTheme({ palette: { mode: "dark" } });
+  const darkTheme = createTheme({ palette: { mode: 'dark' } })
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -24,7 +24,7 @@ const App = () => {
         </BrowserRouter>
       </Box>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
