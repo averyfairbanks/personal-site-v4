@@ -1,17 +1,21 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  --primary-bg: white;
-  --secondary-bg: linear-gradient(to top, #fdbb2d 0%, #5328a1 50%, #3a1c71 100%);
-  --text-color-title: #3a1c71;
-  --text-color-body: white;
-  --text-shadow-body: var(--text-color-title) 2px 0 5px;
-  --card-bg: #3a1c71;
-px 0 5px;
+    --primary-bg: white;
+    --secondary-bg: linear-gradient(
+        to top,
+        #fdbb2d 0%,
+        #5328a1 50%,
+        #3a1c71 100%
+    );
+    --text-color-title: #3a1c71;
+    --text-color-body: white;
+    --text-shadow-body: var(--text-color-title) 2px 0 5px;
+}
