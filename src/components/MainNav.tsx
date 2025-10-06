@@ -1,9 +1,9 @@
-import { AppBar, MenuItem, Slide, useScrollTrigger } from '@mui/material';
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { content } from '../resources/content';
-import '../styles/MainNav.css';
-import '../styles/App.css';
+import { AppBar, MenuItem, Slide, useScrollTrigger } from "@mui/material";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { content } from "../resources/content";
+import "../styles/MainNav.css";
+import "../styles/App.css";
 
 interface NavProps {
   children: React.ReactElement;
@@ -25,7 +25,7 @@ const MainNav: React.FC = () => {
   };
 
   const { pathname } = useLocation();
-  if (pathname === '/') {
+  if (pathname === "/") {
     return null;
   }
 
@@ -34,21 +34,21 @@ const MainNav: React.FC = () => {
   return (
     <HideOnScroll>
       <AppBar className="flex-config fix-styles">
-        {!isCurrentURL('/about') && (
+        {!isCurrentURL("/about") && (
           <MenuItem>
             <Link className="clean-link menu-link" to="/about">
               {about.title.toLowerCase()}
             </Link>
           </MenuItem>
         )}
-        {!isCurrentURL('/work') && (
+        {!isCurrentURL("/work") && (
           <MenuItem>
             <Link className="clean-link menu-link" to="/work">
               {work.title.toLowerCase()}
             </Link>
           </MenuItem>
         )}
-        {!isCurrentURL('/contact') && (
+        {!isCurrentURL("/contact") && (
           <MenuItem>
             <Link className="clean-link menu-link" to="/contact">
               {contact.title.toLowerCase()}
