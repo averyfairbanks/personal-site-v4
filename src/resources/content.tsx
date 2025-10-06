@@ -1,11 +1,11 @@
-import attnLogo from '../resources/logos/Attentive_Logo-Circle_Black-Yellow_RGB.svg'
+import attnLogo from '../resources/logos/Attentive_Logo-Circle_Black-Yellow_RGB.svg';
 
 export interface PageContent {
-  title: string
-  body?: string
+  title: string;
+  body?: string;
 }
 
-export type PageContentKey = 'welcome' | 'about' | 'work' | 'contact'
+export type PageContentKey = 'welcome' | 'about' | 'work' | 'contact';
 
 export const content: Record<PageContentKey, PageContent> = {
   welcome: {
@@ -28,15 +28,15 @@ export const content: Record<PageContentKey, PageContent> = {
       
       avery [at] averyf [dot] dev`,
   },
-}
+};
 
 export interface Job {
-  company: string
-  title: string
-  dateRange: string
-  description: string[]
-  url: string
-  logo?: string
+  company: string;
+  title: string;
+  dateRange: string;
+  description: string[];
+  url: string;
+  logo?: string;
 }
 
 export const jobs: Job[] = [
@@ -93,4 +93,4 @@ export const jobs: Job[] = [
     logo: attnLogo,
     url: 'https://www.attentivemobile.com/',
   },
-]
+];

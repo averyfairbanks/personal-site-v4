@@ -1,4 +1,4 @@
-import CircleIcon from '@mui/icons-material/Circle'
+import CircleIcon from '@mui/icons-material/Circle';
 import {
   Avatar,
   Card,
@@ -10,13 +10,13 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
-} from '@mui/material'
-import { Job } from '../resources/content'
-import '../styles/WorkCard.css'
-import { Fragment } from 'react'
+} from '@mui/material';
+import { Job } from '../resources/content';
+import '../styles/WorkCard.css';
+import { Fragment } from 'react';
 
 interface WorkCardProps {
-  job: Job
+  job: Job;
 }
 
 const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
@@ -42,9 +42,9 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
             </Typography>
             <List>
               {job.description?.map((bulletText: string, ind: number) => {
-                const indentBullet = bulletText.startsWith('-')
+                const indentBullet = bulletText.startsWith('-');
                 if (indentBullet) {
-                  bulletText = bulletText.replace('-', '')
+                  bulletText = bulletText.replace('-', '');
                 }
 
                 return (
@@ -64,7 +64,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
                       }
                     />
                   </ListItem>
-                )
+                );
               })}
             </List>
           </CardContent>
@@ -72,7 +72,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ job }) => {
       </Card>
       <Divider style={{ minHeight: 20 }} />
     </Fragment>
-  )
-}
+  );
+};
 
-export default WorkCard
+export default WorkCard;

@@ -1,30 +1,33 @@
-import { Link } from 'react-router-dom'
-import { content } from '../resources/content'
-import '../styles/App.css'
+import { Link } from 'react-router-dom';
+import { content } from '../resources/content';
+import '../styles/App.css';
 
-import { animate, splitText, stagger } from 'animejs'
+import { animate, splitText, stagger } from 'animejs';
+import { useEffect } from 'react';
 
 const Home: React.FC = () => {
   const {
     welcome: { title },
-  } = content
+  } = content;
 
-  const { chars } = splitText('a', { words: false, chars: true })
+  useEffect(() => {});
+
+  const { chars } = splitText('.anim-target', { words: false, chars: true });
 
   animate(chars, {
-    x: [{ to: 15, ease: 'inBack' }],
-    duration: 500,
-    delay: stagger(40),
+    x: [{ to: 10, ease: 'inOutElastic' }],
+    duration: 1600,
+    delay: stagger(30),
     loop: true,
     alternate: true,
     autoplay: true,
-  })
+  });
 
   return (
-    <Link className="title clean-link" to="/about">
+    <Link className="title clean-link anim-target" to="/about">
       {title}
     </Link>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,35 +1,35 @@
-import { AppBar, MenuItem, Slide, useScrollTrigger } from '@mui/material'
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { content } from '../resources/content'
-import '../styles/MainNav.css'
-import '../styles/App.css'
+import { AppBar, MenuItem, Slide, useScrollTrigger } from '@mui/material';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { content } from '../resources/content';
+import '../styles/MainNav.css';
+import '../styles/App.css';
 
 interface NavProps {
-  children: React.ReactElement
+  children: React.ReactElement;
 }
 
 const HideOnScroll: React.FC<NavProps> = ({ children }) => {
-  const trigger = useScrollTrigger()
+  const trigger = useScrollTrigger();
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
     </Slide>
-  )
-}
+  );
+};
 
 const MainNav: React.FC = () => {
   const isCurrentURL = (url: string) => {
-    return window.location.pathname === url
-  }
+    return window.location.pathname === url;
+  };
 
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
   if (pathname === '/') {
-    return null
+    return null;
   }
 
-  const { about, work, contact } = content
+  const { about, work, contact } = content;
 
   return (
     <HideOnScroll>
@@ -57,7 +57,7 @@ const MainNav: React.FC = () => {
         )}
       </AppBar>
     </HideOnScroll>
-  )
-}
+  );
+};
 
-export default MainNav
+export default MainNav;
